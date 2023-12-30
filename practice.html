@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //  While loop
+      var index = 1;
+
+      while (index <= 10) {
+        console.log(index);
+        index++;
+      }
+
+      // do While
+
+      var index = 0;
+      do {
+        console.log("index", index);
+        index++;
+      } while (index < 11);
+
+      // Task1:
+      // 1)print: 1
+      //            12
+      //            123
+      //            1234
+      //            12345
+
+      for (i = 1; i <= 5; i++) {
+        var line = "";
+
+        for (j = 1; j <= i; j++) line += j;
+        console.log(line);
+      }
+
+      // 2)print: 1234
+    //   123;
+    //   12;
+    //   1;
+       
+     for(i=4; i>=1; i--){
+        var line = ""
+        for(j=4; j<=i; j--){
+            // line+=j;
+        }
+        console.log(line);
+     }
+// 3)Change the key->salary to salary of an employee inside an Object.
+
+
+      var obj = {
+        id: 123,
+        name: "yerusha",      };
+
+      obj.nameValue = obj.name;
+      delete obj.name;
+      console.log(obj);
+
+    // 4)write a programme to print prime numbers 1 to 100(using loops).
+      
+
+      // 5)write a programme to print Fibonacci series(using loops).
+      
+      var a = 0;
+       var b = 1 ;
+       var c;
+       num = 9;
+       for(i=1; i<=num; i++){
+         c = a +b;
+         a = b;
+         b = c;
+         console.log(c);
+       }
+
+          
+
+      // Doubt session tasks:
+
+      // task1.
+
+      function dayOfWeek(day) {
+        if (day == 1) {
+          return "Monday";
+        } else if (day == 2) {
+          return "Tuesday";
+        } else if (day == 3) {
+          return "Wednesday";
+        } else if (day == 4) {
+          return "Thursday";
+        } else if (day == 5) {
+          return "Friday";
+        } else if (day == 6) {
+          return "Saturday";
+        } else if (day == 7) {
+          return "Sunday";
+        } else {
+          return "Invalid day";
+        }
+      }
+      console.log(dayOfWeek(1));
+      console.log(dayOfWeek(5));
+      console.log(dayOfWeek(6));
+      console.log(dayOfWeek(7));
+      console.log(dayOfWeek(0));
+      console.log(dayOfWeek(2));
+
+      // // Task2:
+
+      // function isEven(num){
+      //   if(num%2 ===0){
+      //     return 'even';
+      //   }
+      //   else{
+      //     return "odd";
+      //   }
+
+      // }
+      // console.log(isEven(2));
+      // console.log(isEven(1));
+    </script>
+  </body>
+</html>
