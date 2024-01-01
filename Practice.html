@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //     1.  
+    // *
+    //  **
+    //  ***
+    //  ****
+    for( i = 1 ; i <=4 ; i++){
+        var line = "";
+
+        for ( j=1; j<=i; j++)
+        {
+            line+="*"
+        }
+        console.log(line);
+    }
+
+
+
+
+// 2.  ****
+//      ***
+//      **
+//      *
+for( i = 1 ; i <=4 ; i--){
+        var line = "";
+
+        for ( j=1; j<=i; j++)
+        {
+            line+="*"
+        }
+        console.log(line);
+    }
+
+
+
+//   Task 3
+
+var employeeDetails = {
+            ID: 3504,
+            Name: "Yerusha Kandula",
+            Designation: "senior Executive",
+        };
+        console.log("Print employeeDetails ");
+        console.log(Object.keys(employeeDetails));
+        console.log(Object.values(employeeDetails));
+        console.log(Object.entries(employeeDetails));
+
+        // for (var index = 0; index < Object.keys(employeeDetails).index; index++)
+        //  {
+        //     console.log(Object.keys(employeeDetails)[2]);
+        // }
+
+        console.log('To print only keys and values');
+        
+     for ( var keys in employeeDetails){
+        console.log(keys);//key names.
+     }
+     
+     for(var keys of Object.values(employeeDetails)){
+       console.log(keys);
+     }
+    console.log( 'To check whether the key is there in Object.');
+
+    console.log(employeeDetails.hasOwnProperty("Name"));
+    console.log(employeeDetails.hasOwnProperty("ID"));
+
+// 
+
+// For numbers
+var i = 110;
+console.log(i);
+j =10;
+var i = j;
+
+console.log(i);
+
+
+// For objects
+
+var obj = {
+    name: "Yerusha",
+    id: 3504,
+    Designation: "senior executive",
+};
+// It prints all the properties in obj1 as well.
+
+var obj1 = obj;
+console.log("Before", obj, obj1);
+obj.name = "Kandula";
+console.log("After",obj, obj1);
+
+// // To avoid we use the reassigning values.
+ 
+// we use 
+
+// var obj1 = Object.assign({}, obj)
+// var obj1 = Object.assign({font-size: 25px, obj})
+// var obj1 = {...obj};
+
+
+
+
+
+
+// var obj1 = Object.assign({color:'red', obj}) 
+// var obj1 = Object.assign({}, obj)
+var obj1 = {...obj};
+
+console.log("Before", obj, obj1);
+obj.name = "Yerusha";
+console.log("After",obj, obj1);
+
+
+// Freeze.
+
+console.log('Freeze cannot be update, delete or add');
+
+var employeeDetails2 = {
+            ID: 3504,
+            Name: "Yerusha Kandula",
+            Designation: "senior Executive",
+        };
+
+
+console.log(Object.freeze(employeeDetails2));
+
+console.log("Before", employeeDetails, employeeDetails2);
+employeeDetails2.Name = "Enosh"
+console.log("After", employeeDetails, employeeDetails2);
+
+
+// seal
+console.log("Seal can update the existing property but cannot be add or delete");
+
+
+console.log(Object.seal(employeeDetails2));
+console.log("Before", employeeDetails, employeeDetails2);
+employeeDetails.Name = "enosh"
+console.log("After", employeeDetails, employeeDetails2);
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
