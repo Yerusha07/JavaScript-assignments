@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// Difference b/w slice and substring.
+
+var str = "Yerusha";
+
+var str1 = str.slice();
+var str2 = str.substring();
+console.log("slice =",str1);
+console.log("Substring =",str2);
+
+
+// 1. If both arguments are same we get empty string.
+var str = "Yerusha";
+
+
+var str1 = str.slice(1,1);////returns empty string
+var str2 = str.substring(1,1);//returns empty string
+console.log("slice =",str1);
+console.log("Substring =",str2);
+
+
+//2.If we give single argument, only first index is ignored.
+
+//It is because we havent given 2nd argument so we slice from first argument or index 1 to rest of the letters.
+var str = "Yerusha";
+
+var str1 = str.slice(1);//returns erusha
+var str2 = str.substring(1);//returns erusha
+
+console.log("slice =",str1);
+console.log("Substring =",str2);
+
+// 3. If first 
+
+var str = "Yerusha";
+//         0123456
+var str1 = str.slice(1,4);// returns eru as we can see 4-1 =3 (index) so it prints from 1 to 3
+var str2 = str.substring(1,4);// returns eru as we can see 4-1 =3 (index) so it prints from 1 to 3
+console.log("slice =",str1);
+console.log("Substring =",str2);
+
+
+//4. 
+
+//For slice paramteres (a,b), a>b then it prints empty string as its not possible.
+
+// For substring, it will swap the parameters(b,a)
+
+var str = "Yerusha";
+//         0123456
+
+var str1 = str.slice(4,1);
+var str2 = str.substring(4,1);
+console.log("slice =",str1);
+console.log("Substring =",str2);
+
+
+// 5. Slice accepts the negative values.
+
+var str = "Yerusha";
+//         0123456
+
+// For substring, -ve value corresponds to '0'. so 4-0 = 4. so prints Yeru
+         
+var str1 = str.slice(4,-1);// -1-4 = -5
+var str2 = str.substring(4,-1);//prints yeru.
+console.log("slice =",str1);
+// debugger;
+console.log("Substring =",str2);
+
+// 6. 
+
+var str = "Yerusha";
+
+var str1 = str.slice(4,"yeru");//returns empty string
+var str2 = str.substring(4,"yeru");//the string values are treated as "0" in substring 4-0 =4
+console.log("slice =",str1);
+console.log("Substring =",str2);
+
+
+// 7. 
+var str = "Yerusha";
+
+var str1 = str.slice(-1, 7);// returns "a" as the highest number is also considered as string length.
+// So it takes the same length if we give more than the length of the string
+var str2 = str.substring(4,23);// 0-4 = -4
+console.log("slice =",str1);
+console.log("Substring =",str2);
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
