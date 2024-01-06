@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+//TASK-1 1.ip-address
+
+var IpAddress = "181.202.52.10"
+var pattern = /\d{1,3}/g;
+console.log(IpAddress.match(pattern));
+
+
+
+
+// Task 2. phonenumber(must contains 10digits)
+
+var phoneNumber = "9493111111111";
+
+var pattern = /\d{10}/g;
+console.log(phoneNumber.match(pattern));
+
+
+
+
+
+
+// TASK-3. password -> atleast 1 upper case , altleast 1lower , 1 special 1 number and max 16character and min8.
+function isCorrectPwd(password){
+    var hasLower =/[a-z]/.test(password);
+    var hasUpper =/[A-Z]/.test(password);
+    var hasDigit =/\d[0-9]/.test(password);
+    var hasSpecial =/[!@#$%^&*()-_+=<?>]/.test(password);
+    var pwdLength=password.length>=8 && password.length<=16
+
+    return hasLower && hasUpper && hasDigit && hasSpecial && pwdLength;
+
+}
+var password = "Yerush@23"
+console.log(isCorrectPwd(password));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
