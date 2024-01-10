@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //class 1
+    class Employee
+    {
+        constructor(name, Id,Designation,salary,exp)
+        {
+          this.name = name;
+          this.Id = Id;
+          this.Designation = Designation;
+          this.salary = salary;
+          this.exp =exp;
+          console.log(this);
+        }
+         
+        increment()
+       {
+        if(this.exp>1)
+        {
+            this.salary = this.salary + (0.1*this.salary)
+        }else
+        {
+            this.salary = this.salary + (0.2*this.salary)
+        }
+    }
+
+    }
+//objects in classes
+const emp1 = new Employee("Yerusha",3504,"Developer",30000,1)
+const emp2 = new Employee("John",4504,"sr.developer", 30000,2)
+
+emp2.increment();
+console.log(emp2);
+emp1.increment()
+console.log(emp1);
+
+//class2
+
+class Person
+{
+    constructor(name,gender,color,age)
+    {
+        this.name =name;
+        this.gender =gender;
+        this.color =color;
+        this.age =age;
+         console.log(this);
+    }
+    
+elder()
+{
+    if(this.age>20)
+    {
+        this.name = this.name + " is " +  "Elder"
+    }else
+    {
+        this.name =this.name  + " is " +
+        "Younger"
+    }
+}
+}
+
+
+const yerusha = new Person("Yerusha",'female','fair',20)
+const john = new Person("John",'male','fair',24);
+
+yerusha.elder()
+console.log(yerusha);
+john.elder()
+console.log(john);
+
+//class3
+
+class Car 
+{
+  constructor(name,color,fueltype,price,km)
+  {
+   this.name = name;
+   this.color = color;
+   this.fueltype = fueltype;
+   this.price = price;
+   this.km = km;
+
+   console.log(this);
+
+  }
+
+  speed()
+  {
+    if(this.km>=200)
+    {
+        this.name = this.name + " is " +"faster"
+    }else if(this.km==150){
+        this.name = this.name + " is " + "Normal"
+    }else
+    {
+        this.name = this.name + " is " + "slower"
+
+    }
+  }
+
+}
+
+const type1 = new Car ('swift','white','Gasoline',50000,100)
+const type2 = new Car ('bmw','black','diesel',70000,200)
+const type3 = new Car ('skoda' ,'grey','petrol',80000,150)
+
+type1.speed()
+console.log(type1);
+type2.speed()
+console.log(type2);
+type3.speed()
+console.log(type3);
+
+
+//class 4
+
+class Remote
+{
+    constructor(name,color,buttons)
+    {
+     this.name =name;
+     this.color =color;
+     this.buttons =buttons;
+    console.log(this);
+    }
+    works()
+{
+    if(this.buttons>20)
+    {
+        this.name = this.name + " works faster"
+    }
+    else{
+        this.name =this.name + " works slower"
+    }
+}
+
+}
+
+const access1 = new Remote('square','black',24)
+const access2 = new Remote('circle','blue',10)
+
+
+access2.works()
+console.log(access2);
+access1.works()
+console.log(access1);
+
+//class 5
+
+class Laptop
+{
+    constructor(name,color,version,RAM)
+    {
+     this.name = name;
+     this.color = color;
+     this.version = version;
+     this.RAM = RAM;
+     console.log(this);
+
+    }
+
+updated()
+{
+    if(this.version=='windows11'|| 'windows12')
+    {
+        this.name = this.name + " is " + "updated LAPPY"
+    }else
+    {
+        this.name = this.name + " is " +
+        "not an updated LAPPY"
+    }
+}
+
+
+}
+
+const lappy1 = new Laptop('Dell','silver','windows10',12)
+const lappy2 = new Laptop('ASUS','blue','windows11',16)
+const lappy3 = new Laptop('HP','black','windows12',16)
+
+lappy1.updated()
+console.log(lappy1);
+lappy2.updated()
+console.log(lappy2);
+lappy3.updated()
+console.log(lappy3);
+
+
+    </script>
+</body>
+</html>
