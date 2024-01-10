@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+        // Task-2
+        // 2.Array even and Odd [using for-of and for-in];
+
+      let array = [0, 1, 2, 3, 4];
+      let even = [];
+
+      for (let evens of array) {
+        if (evens % 2 == 0) {
+          even.push(evens);
+        }
+      }
+      console.log(even);
+
+      let oddarray = [1, 2, 3, 4, 5];
+      let odd = [];
+      for (let odds of oddarray) {
+        if (odds % 2 != 0) {
+          odd.push(odds);
+        }
+      }
+      console.log(odd);
+
+
+      // TASK -3.Reverse array in both predefined and normal;
+
+      console.log("normal array");
+
+      let arr = [1,2,3,4,5]
+      
+    for(let i= arr.length-1; i>=0;i--)
+    {
+      console.log(arr[i]);
+    }
+//predefined.
+
+let arr1 = [1,2,3,4,5]
+
+console.log(arr1.reverse());
+
+
+
+//Task-4.4.sorting an array [ascending and descending] of Strings and numbers;
+
+let array1 = [22,1,0,2,99,5]
+
+console.log(array1.sort((function(x,y)
+{
+    return x-y//ascending
+})));
+
+let array2 = [22,1,0,2,99,5]
+
+console.log(array2.sort((function(x,y)
+{
+    return y-x//ascending
+})));
+
+// 5.palindrome
+
+
+function isPalindrome(str)
+{
+  let reverse = "";
+  for(i=str.length-1; i>=0; i--)
+  {
+    reverse+=str[i]
+  }
+  if(reverse==str)
+  {
+    console.log(str, "is palindrome");
+  }
+  else{
+    console.log(str,"not a palindrome");
+  }
+}
+isPalindrome("DAD")
+
+
+
+
+    </script>
+  </body>
+</html>
